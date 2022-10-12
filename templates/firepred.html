@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title >
+		FIRE PREDICTOR
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: rgb(100,150,220);
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: rgb(100,100,220);
+			max-width: 500px;
+			max-width: 700;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+
+
+		/* Styling Button */
+		button {
+			background-color:#FFFFFF;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="color: #000111;">FIRE PREDICTOR</h1>
+	<form action="{{ url_for("predict")}}" method="post">
+
+    <div class="form-control">
+			<label for="oxygen" >oxygen	</label>
+      <input type="text"
+				id="oxygen" name="oxygen"
+				placeholder="oxygen">
+		</div>
+
+		<div class="form-control">
+			<label for="temperature">temperature</label>
+    	<input type="text"
+				id="temperature" name="temperature"
+				placeholder="temperature">
+		</div>
+
+		<div class="form-control">
+			<label for="humidity">humidity</label>
+     	<input type="text"
+				id="humidity"  name="humidity"
+				placeholder="humidity ">
+		</div>
+   	<button type="submit" >Predict</button>
+	</form>
+</body>
+
+</html>
+{% block main %}
+{% endblock %}
+
+
+<!-- <form action="{{ url_for("predict")}}" method="post">
+<label for="oxygen">oxygen:</label>
+<input type="text" id="oxygen" name="oxygen" placeholder="oxygen">
+<label for="temperature">temperature:</label>
+<input type="text" id="temperature" name="temperature" placeholder="temperature">
+<label for="humidity">Contact:</label>
+<input type="text" id="humidity" name="humidity" placeholder="humidity">
+
+<button type="submit">submit</button> -->

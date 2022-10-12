@@ -1,0 +1,55 @@
+<!-- <form action="http://localhost:5000/data" method="post">
+<h>welcome ,{{name}}</h>
+</form> -->
+<!-- <html>
+<head>
+  <title>style table</title>
+  <form action="http://localhost:5000/data" method="post">
+  <style>
+  table,td,th{
+    border :1px solid #dddd;
+    text-align:left;
+
+  }
+  table{
+    border-collapse:collapse;
+    width:100%;
+  }
+  th,td{
+    padding:15px;
+  }
+  tr:hover{
+    background-color:  rgb(90,100,240);
+  }
+  </style>
+</head>
+<h2 style="color: cyan">fire prediction is {{result[3]}}</h2>
+  <body style="background-color: rgb(100,100,220);">
+  <table>
+    <tr>
+      <th>oxygen</th>
+      <th>temperature</th>
+      <th>humidity</th>
+      <th>prediction</th>
+
+
+    </tr>
+
+
+    <tr style="color:cyan;">
+      <td>{{result[0]}}</td>
+      <td>{{result[1]}}</td>
+      <td>{{result[2]}}</td>
+      <td>{{result[3]}}</td>
+
+    </tr>
+
+  </table>
+
+</body>
+</html> -->
+
+{% extends "firepred.html" %}
+{% block main %}
+<p style="color:cyan;" >prediction is {{result[3]}} </p>
+{% endblock  %}
