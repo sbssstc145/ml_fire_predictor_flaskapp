@@ -8,7 +8,7 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 
-@app.route("/data", methods=["POST", "GET"])
+@app.route("/", methods=["POST", "GET"])
 def predict():
     if request.method == "POST":
         oxygen = request.form.get("oxygen")
