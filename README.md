@@ -12,6 +12,5 @@ numpy== 1.22.0
 matplotlib== 3.5.1
 gunicorn==20.1.0
 
-flask app deployed using heroku 
-https://forestfirepredictorapp1.herokuapp.com/
+
 
